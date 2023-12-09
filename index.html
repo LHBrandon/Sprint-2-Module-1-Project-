@@ -28,7 +28,9 @@
       //   * If name is a string, and has a length bigger than 2, then return the string "OK"
 
       // ✨ Your code here
+
       let result;
+
       if (typeof name !== 'string') {
         result = "name must be a string";
       } else if (typeof name === "string" && name.length < 2) {
@@ -68,7 +70,7 @@
       } else {
         result = "OK"
       }
-      return result
+      return result;
 
 
     }
@@ -89,7 +91,9 @@
       // 4- Return string "OK" if everything above checks out
 
       // ✨ Your code here
+
       let result;
+
       if (typeof year !== 'number') {
         result = "year must be a number"
       } else if (year < 1 || year > 9999) {
@@ -105,7 +109,8 @@
       } else {
         result = "OK"
       }
-      return result
+
+      return result;
     }
 
     // 👉 CHALLENGE 4
@@ -128,18 +133,20 @@
       // If the arguments represent a valid line return true, otherwise false.
 
       // ✨ Your code here
+
       let result;
+
       if (
         (a === null || a === "X" || a === "O") &&
         (b === null || b === "X" || b === "O") &&
-        (c === null || c === "X" || c === "O") 
-      ) { 
+        (c === null || c === "X" || c === "O")
+      ) {
         result = true
       } else {
-       result = false
+        result = false
       }
-      
-      return result 
+
+      return result;
     }
 
     // 👉 CHALLENGE 5
@@ -158,22 +165,24 @@
       // 3- If everything above checks out return the happy or sad greeting as seen in the Examples of use above.
 
       // ✨ Your code here
-        const nameValidation = checkName(name)
-        if (nameValidation !== 'OK') {
-          return nameValidation
-        }
-        if (typeof isHappy !== 'boolean') {
-          return "isHappy must be a Boolean"
-        }
 
-        let mood;
-        if (isHappy) {
-          mood = 'happy'
-        } else {
-          mood = 'sad'
-        }
-        let result = `Hi, I am ${name} and I am ${mood}.`;
-        return result 
+      const nameValidation = checkName(name)
+      if (nameValidation !== 'OK') {
+        return nameValidation
+      }
+      if (typeof isHappy !== 'boolean') {
+        return "isHappy must be a Boolean"
+      }
+
+      let mood;
+      if (isHappy) {
+        mood = 'happy'
+      } else {
+        mood = 'sad'
+      }
+      let result = `Hi, I am ${name} and I am ${mood}.`;
+
+      return result;
     }
 
     // 🧪 TESTS, do not work below this line
